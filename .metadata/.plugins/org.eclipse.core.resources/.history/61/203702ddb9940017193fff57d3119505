@@ -1,0 +1,37 @@
+/**@COPYRIGHTS ALL RIGHTS ARE RESERVED
+ * 
+ */
+package com.model;
+
+import org.hibernate.Session;
+import org.hibernate.cfg.Configuration;
+
+/**
+ * NAME:shaikh irfan
+ *
+ * TIME:10:42:25 pm
+ *DATE:08-Sep-2017
+ *TAGS:
+ */
+public class test {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+   Session ses=new Configuration().configure().buildSessionFactory().openSession();
+   
+   friends f=new friends();
+   f.setName("nnn");
+   f.setPhno(1212);
+   student s=new student();
+ 
+   s.setFrinds1(f);
+   ses.getTransaction().begin();
+   ses.save(s);
+   ses.getTransaction().commit();
+   System.out.println("recor is enterd");
+	}
+
+}

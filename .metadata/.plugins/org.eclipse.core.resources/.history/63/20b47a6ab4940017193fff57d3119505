@@ -1,0 +1,56 @@
+/**@COPYRIGHTS ALL RIGHTS ARE RESERVED
+ * 
+ */
+package com.ij.test;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+import com.ij.model.answer;
+import com.ij.model.question;
+
+/**
+ * NAME:shaikh irfan
+ *
+ * TIME:6:15:09 am
+ *DATE:01-Sep-2017
+ *TAGS:
+ */
+public class javaPortal {
+
+	static SessionFactory factory=new Configuration().configure().buildSessionFactory();
+static	Session ses=factory.openSession();
+	public static void main(String[] args) {
+		answer a1=new  answer();
+				a1.setAns("java");
+		answer a2=new  answer();
+				a2.setAns("php");
+		answer a3=new  answer();
+				a3.setAns(".net");
+		answer a4=new  answer();
+				a4.setAns("hadoop");
+				question q=new question();
+				q.setQuestioni("list of programming language");
+				q.getListofans().add(a1);
+				q.getListofans().add(a2);
+				q.getListofans().add(a3);
+				q.getListofans().add(a4);
+				ses.beginTransaction();
+				ses.save(a1);
+				ses.save(a2);
+				ses.save(a3);
+				ses.save(a4);
+				ses.save(q);
+				ses.getTransaction().commit();
+				System.out.println("record is enterd");
+				
+   
+		
+	}
+
+}

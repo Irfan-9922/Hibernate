@@ -1,0 +1,43 @@
+/**@COPYRIGHTS ALL RIGHTS ARE RESERVED
+ * 
+ */
+package com.model;
+
+import org.hibernate.Session;
+import org.hibernate.cfg.Configuration;
+
+/**
+ * NAME:shaikh irfan
+ *
+ * TIME:11:33:01 pm
+ *DATE:08-Sep-2017
+ *TAGS:
+ */
+public class test2 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+		Session ses=new Configuration().configure().buildSessionFactory().openSession();
+		
+		
+		girlfriends g1=new girlfriends();
+		girlfriends g2=new girlfriends();
+		
+		student s=new student();
+		s.setName("irfan");
+		g1.setAge(12);
+		g1.setName("rashi");
+		
+		s.getListofgrilfrends().add(g1);
+		g1.getGetboyfriendList().add(s);
+		
+		
+		
+		
+		
+	}
+
+}

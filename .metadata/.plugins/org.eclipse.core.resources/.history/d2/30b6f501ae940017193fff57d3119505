@@ -1,0 +1,38 @@
+/**@COPYRIGHTS ALL RIGHTS ARE RESERVED
+ * 
+ */
+package com.ij.test;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.hibernate.Session;
+import org.hibernate.cfg.Configuration;
+
+/**
+ * NAME:shaikh irfan
+ *
+ * TIME:9:14:03 pm
+ *DATE:08-Sep-2017
+ *TAGS:
+ */
+public class test {
+
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+   
+		Session ses=new Configuration().configure().buildSessionFactory().openSession();
+		
+		
+		Map<String,String> ans=new HashMap();
+		ans.put("java is object orinted language", "by Irfan");
+		ans.put("opensource", "by nisar");
+
+		Map<String,String> ans1=new HashMap();
+		ans.put("php is object orinted language", "by shivam");
+		ans.put("commarsial", "by mahesh");
+		
+	}
+
+}

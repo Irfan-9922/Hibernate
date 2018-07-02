@@ -1,0 +1,24 @@
+/**@COPYRIGHTS ALL RIGHTS ARE RESERVED
+ * 
+ */
+package com.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+/**
+ * NAME:shaikh irfan
+ *
+ * TIME:11:07:41 pm
+ *DATE:08-Sep-2017
+ *TAGS:
+ */
+@Entity
+public class student {
+	
+	private String name;
+	@Id @GeneratedValue
+	private int no;
+	
+}

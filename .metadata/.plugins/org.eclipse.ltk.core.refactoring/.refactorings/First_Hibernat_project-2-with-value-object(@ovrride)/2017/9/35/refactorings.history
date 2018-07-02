@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;First_Hibernat_project-2-with-value-object(@ovrride)&apos;&#x0D;&#x0A;- Original project: &apos;First_Hibernat_project-2-with-value-object(@ovrride)&apos;&#x0D;&#x0A;- Original element: &apos;com.ij.model.city1.java&apos;" description="Delete element" element1="/src&lt;com.ij.model{city1.java" elements="1" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1504229925591" subPackages="false" version="1.0"/>
+</session>

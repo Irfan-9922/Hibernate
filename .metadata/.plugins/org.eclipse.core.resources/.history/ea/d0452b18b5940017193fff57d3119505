@@ -1,0 +1,29 @@
+/**@COPYRIGHTS ALL RIGHTS ARE RESERVED
+ * 
+ */
+package com.ij.model;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.ElementCollection;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+/**
+ * NAME:shaikh irfan
+ *
+ * TIME:6:10:34 am
+ *DATE:01-Sep-2017
+ *TAGS:
+ */
+@Entity
+public class question {
+@Id @GeneratedValue
+private int qid;
+@ElementCollection
+@OneToMany
+private List<answer> listofans=new ArrayList();
+}

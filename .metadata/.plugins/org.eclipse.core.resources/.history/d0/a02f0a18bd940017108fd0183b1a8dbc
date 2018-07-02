@@ -1,0 +1,43 @@
+/**@COPYRIGHTS ALL RIGHTS ARE RESERVED
+ * 
+ */
+package com.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+/**
+ * NAME:shaikh irfan
+ *
+ * TIME:11:07:41 pm
+ *DATE:08-Sep-2017
+ *TAGS:
+ */
+@Entity
+public class student {
+	
+	private String name;
+	@Id @GeneratedValue
+	private int no;
+	public String getName() {
+		return name;
+	}
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "student [name=" + name + ", no=" + no + "]";
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getNo() {
+		return no;
+	}
+	public void setNo(int no) {
+		this.no = no;
+	}
+	
+}

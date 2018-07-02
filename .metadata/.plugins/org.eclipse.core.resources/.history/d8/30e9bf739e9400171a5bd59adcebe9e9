@@ -1,0 +1,92 @@
+/**@COPYRIGHTS ALL RIGHTS ARE RESERVED
+ * 
+ */
+package com.model;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.ElementCollection;
+import javax.persistence.Embedded;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+/**
+ * NAME:shaikh irfan
+ *
+ * TIME:6:47:25 pm
+ *DATE:08-Sep-2017
+ *TAGS:
+ */
+@Entity
+@Table(name="BOYES_DETAILS")
+public class BoyDetails {
+	@Id @GeneratedValue
+	private int no;
+	@Column(name="NAME")
+	private String name;
+
+	@Column(name="EDUCATION")
+	private String education;
+
+	@Column(name="LOOKS")
+	private String look;
+
+	@Column(name="RICH")
+	private String property1;
+
+	@Column(name="CONTACTNO")
+	private String phno;
+	@OneToMany
+	@Embedded
+	@ElementCollection
+	private List<girlfirends> listOfgirlfirends=new ArrayList();
+	
+	@Override
+	public String toString() {
+		return "BoyDetails [name=" + name + ", education=" + education + ", look=" + look + ", property1=" + property1
+				+ ", phno=" + phno + ", listOfgirlfirends=" + listOfgirlfirends + "]";
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getEducation() {
+		return education;
+	}
+	public void setEducation(String education) {
+		this.education = education;
+	}
+	public String getLook() {
+		return look;
+	}
+	public void setLook(String look) {
+		this.look = look;
+	}
+	public String getProperty1() {
+		return property1;
+	}
+	public void setProperty1(String property1) {
+		this.property1 = property1;
+	}
+	public String getPhno() {
+		return phno;
+	}
+	public void setPhno(String phno) {
+		this.phno = phno;
+	}
+	public List<girlfirends> getListOfgirlfirends() {
+		return listOfgirlfirends;
+	}
+	public void setListOfgirlfirends(List<girlfirends> listOfgirlfirends) {
+		this.listOfgirlfirends = listOfgirlfirends;
+	}
+	
+
+}

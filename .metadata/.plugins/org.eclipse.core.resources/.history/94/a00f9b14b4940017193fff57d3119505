@@ -1,0 +1,56 @@
+/**@COPYRIGHTS ALL RIGHTS ARE RESERVED
+ * 
+ */
+package com.ij.model;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.ElementCollection;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+/**
+ * NAME:shaikh irfan
+ *
+ * TIME:6:10:34 am
+ *DATE:01-Sep-2017
+ *TAGS:
+ */
+@Entity
+public class question {
+	@Id @GeneratedValue
+	private int idno;
+	private String questioni;
+	public String getQuestioni() {
+		return questioni;
+	}
+	public void setQuestioni(String questioni) {
+		this.questioni = questioni;
+	}
+	@ElementCollection
+	
+	private List<answer> listofans=new ArrayList();
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "question [id=" + idno + ", questioni=" + questioni + ", listofans=" + listofans + "]";
+	}
+	public int getId() {
+		return idno;
+	}
+	public void setId(int id) {
+		this.idno = id;
+	}
+	public List<answer> getListofans() {
+		return listofans;
+	}
+	public void setListofans(List<answer> listofans) {
+		this.listofans = listofans;
+	}
+	
+}

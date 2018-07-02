@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;employee.java&apos; to &apos;hb_curd_opretion/src/com.ij.domain&apos;&#x0D;&#x0A;- Original project: &apos;myhb1&apos;&#x0D;&#x0A;- Destination element: &apos;hb_curd_opretion/src/com.ij.domain&apos;&#x0D;&#x0A;- Original element: &apos;com.ij.domain.employee.java&apos;" description="Copy compilation unit" destination="=hb_curd_opretion/src&lt;com.ij.domain" element1="/src&lt;com.ij.domain{employee.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1504186438663" units="1" version="1.0"/>
+</session>

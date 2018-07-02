@@ -1,0 +1,48 @@
+/**@COPYRIGHTS ALL RIGHTS ARE RESERVED
+ * 
+ */
+package com.domain;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.hibernate.Session;
+import org.hibernate.cfg.Configuration;
+
+/**
+ * NAME:shaikh irfan
+ *
+ * TIME:2:27:55 am
+ *DATE:09-Sep-2017
+ *TAGS:
+ */
+public class test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Session ses=new Configuration().configure().buildSessionFactory().openSession();
+		
+		
+		Map<String,String> l=new HashMap<>();
+
+		l.put("irfan", "java");
+		l.put("irfan", "java");
+		l.put("irfan", "java");
+		
+
+		question q=new question(1, "nisar", "what is java", l);
+		question q1=new question(2, "nisar", "what is java", l);
+		
+		ses.getTransaction().begin();
+		ses.save(q);
+		ses.save(q1);
+		
+		ses.getTransaction().commit();
+		ses.flush();
+		System.out.println("record is inserted");
+		ses.close();
+	
+		
+	}
+
+}

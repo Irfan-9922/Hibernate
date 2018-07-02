@@ -1,0 +1,37 @@
+/**@COPYRIGHTS ALL RIGHTS ARE RESERVED
+ * 
+ */
+package com.domain;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.hibernate.Session;
+import org.hibernate.cfg.Configuration;
+
+/**
+ * NAME:shaikh irfan
+ *
+ * TIME:2:27:55 am
+ *DATE:09-Sep-2017
+ *TAGS:
+ */
+public class test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Session ses=new Configuration().configure().buildSessionFactory().openSession();
+		Map<String,String> l=new HashMap<>();
+		l.put("javais platform indipendent", "irfan");
+		question q=new question();
+		q.setName("nisar");
+		q.setQue("what is java");
+		
+		q.setAnswer(l);
+		ses.getTransaction().begin();
+		ses.save(q);
+		ses.getTransaction().commit();
+		
+	}
+
+}

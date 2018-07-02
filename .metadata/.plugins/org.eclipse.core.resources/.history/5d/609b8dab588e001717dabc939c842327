@@ -1,0 +1,51 @@
+/**@COPYRIGHTS ALL RIGHTS ARE RESERVED
+ * 
+ */
+package test;
+
+import javax.transaction.Transaction;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+import com.domain.employe;
+
+/**
+ * NAME:shaikh irfan
+ *
+ * DATE:7:10:19 pm
+ *TIME:31-Aug-2017
+ *TAGS:
+ */
+public class test {
+
+	static Configuration cfg=null;
+	static SessionFactory factory=null;
+	static Session ses=null;
+	static org.hibernate.Transaction tx=null;
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		cfg=new Configuration();
+		cfg=cfg.configure("/com/ij/hbconfg.hbm.xml");
+		factory=cfg.buildSessionFactory();
+		ses=factory.openSession();
+		employe e=new employe();
+		e.setNo(90);
+		e.setFname("nisar");
+		e.setLname("jalil");
+		e.setEmail("sir@gmail.com");
+		try{
+			tx=ses.beginTransaction();
+			tx.commit();
+		}
+		catch(Exception d)
+		{
+			tx.rollback();
+		}
+		System.out.println("record is inserted");
+
+	}
+
+}

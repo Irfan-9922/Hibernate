@@ -1,0 +1,55 @@
+/**@COPYRIGHTS ALL RIGHTS ARE RESERVED
+ * 
+ */
+package com.model;
+
+import org.hibernate.Session;
+import org.hibernate.cfg.Configuration;
+
+/**
+ * NAME:shaikh irfan
+ *
+ * TIME:11:33:01 pm
+ *DATE:08-Sep-2017
+ *TAGS:
+ */
+public class test2 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+		Session ses=new Configuration().configure().buildSessionFactory().openSession();
+		
+		
+		girlfriends g1=new girlfriends();
+		g1.setAge(12);
+		g1.setName("fff");
+		girlfriends g2=new girlfriends();
+		
+		g2.setAge(121);
+		g2.setName("ggggff");
+		
+		student s=new student();
+		s.setName("irfa");
+		student s1=new student();
+		s.setName("raj");
+		g1.getGetboyfriendList().add(s);
+		g2.getGetboyfriendList().add(s1);
+		ses.getTransaction().begin();
+		ses.save(g1);
+		ses.save(g2);
+		ses.getTransaction().commit();
+		ses.flush();
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}
